@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --scroll: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: #0c0e10;
+  color: #ece7df;
+  overscroll-behavior: none;
+}
+
+.scroll-progress-track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 60;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  width: calc(var(--scroll, 0) * 100%);
+  background: linear-gradient(90deg, #c8631f, #f1b271, #ffe3c0);
+  box-shadow: 0 0 12px rgba(241, 178, 113, 0.6);
+}
